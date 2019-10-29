@@ -14,7 +14,7 @@ class GraphicsmagickConan(ConanFile):
     generators = "cmake"
 
     def source(self):
-        tools.download("https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/1.3.33/GraphicsMagick-1.3.28.tar.gz", "GraphicsMagick-1.3.28.tar.gz")
+        tools.download("https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/1.3.28/GraphicsMagick-1.3.28.tar.gz", "GraphicsMagick-1.3.28.tar.gz")
         tools.untargz("GraphicsMagick-1.3.28.tar.gz")
 
     def build(self):
