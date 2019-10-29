@@ -2,7 +2,7 @@ from conans import ConanFile, tools, AutoToolsBuildEnvironment
 
 class GraphicsmagickConan(ConanFile):
     name = "graphicsmagick"
-    version = "1.3.33"
+    version = "1.3.28"
     license = "MIT"
     author = "Adam Kowalewski ram.techen@gmail.com"
     url = "https://github.com/akowalew/conan-graphicsmagick/issues"
@@ -14,8 +14,8 @@ class GraphicsmagickConan(ConanFile):
     generators = "cmake"
 
     def source(self):
-        tools.download("https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/1.3.33/GraphicsMagick-1.3.33.tar.gz", "GraphicsMagick-1.3.33.tar.gz")
-        tools.untargz("GraphicsMagick-1.3.33.tar.gz")
+        tools.download("https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/1.3.33/GraphicsMagick-1.3.28.tar.gz", "GraphicsMagick-1.3.28.tar.gz")
+        tools.untargz("GraphicsMagick-1.3.28.tar.gz")
 
     def build(self):
         args = [
@@ -44,7 +44,7 @@ class GraphicsmagickConan(ConanFile):
             "--without-zlib",
         ]
         autotools = AutoToolsBuildEnvironment(self)
-        autotools.configure(configure_dir="GraphicsMagick-1.3.33", args=args)
+        autotools.configure(configure_dir="GraphicsMagick-1.3.28", args=args)
         autotools.make()
         autotools.install()
 
